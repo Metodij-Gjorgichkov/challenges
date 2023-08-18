@@ -1,0 +1,12 @@
+body {
+      width: 60%;
+      padding-top: 30px;
+      margin-right: auto;
+      margin-left: auto;
+}
+th, td {
+      padding: 10px;
+      border: 1px solid black;
+}
+
+
