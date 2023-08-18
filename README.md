@@ -1,1 +1,1 @@
-# challenges
+#These challenges are like stages in a game, each one more advanced than the last, designed to help me become a skilled web developer.Every couple of weeks, we're given a new challenge to work on. This pace allows me to really understand each concept before moving on to the next.Looking forward, I'm excited about the challenges that lie ahead.Every new challenge will be posted here!
