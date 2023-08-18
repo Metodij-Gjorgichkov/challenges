@@ -1,0 +1,60 @@
+body {
+	background-color: #f8f9fa;
+}
+.logo {
+	width: 85px;
+}
+.nav-link {
+	color: black !important;
+	font-weight: bold;
+}
+.nav-link:hover, .iconsHover:hover {
+	color: orange !important;
+	background-color: #d3d3d3;
+}
+.bikes {
+	font-size: 47px;
+	font-weight: 400;
+}
+.filteredBy {
+	font-weight: 900;
+	font-size: 18px;
+}
+.gender, .brand {
+	font-weight: 900;
+}
+.paragraphNum {
+	padding: 0px 10px !important;
+	border-radius: 2em !important;
+	background-color: #d3d3d3;
+}
+.boldedParagraph {
+	font-weight: 900;
+	font-size:  20px;
+}
+.orange {
+	background-color: orange;
+}
+.hoverOrange {
+	color: orange !important;
+}
+.hoveredOrange:hover {
+  color: orange;
+}
+.cursor-pointer {
+	cursor: pointer;
+}
+.borderOrange:hover {
+	border: 3px solid orange;
+	transform: translateY(-10px);
+}
+.hoveredGrey:hover {
+    background-color: gray;
+}
+.searchInput {
+	display: none;
+}
+.searchButton {
+	display: none;
+      border-radius: 4px;
+}

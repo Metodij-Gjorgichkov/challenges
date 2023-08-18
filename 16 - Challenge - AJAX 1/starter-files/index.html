@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bikes</title>
+    <meta name="keywords" content="html,css,javaScript" />
+    <meta name="description" content="Bikes" />
+    <meta name="author" content="" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- Latest compiled and minified BOOTSTRAP CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- Font-awesome 5 cdn -->
+    <script
+      src="https://kit.fontawesome.com/ff68f99301.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="navbar">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"
+          ><img src="./img/logo.png" class="logo d-block pt-3" alt="LOGO"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item text-dark">
+              <a class="nav-link text-uppercase" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="#">Bikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="#">Gear</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="#">Parts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="#">Tires</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="#">Service-info</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="#">Catalogues</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-uppercase" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="icons d-flex">
+            <i
+              class="fa-solid fa-magnifying-glass iconsHover p-2 searchIcon"
+            ></i>
+            <i class="fa-solid fa-bag-shopping iconsHover p-2"></i>
+          </div>
+        </div>
+      </nav>
+      <hr style="width: 98%" />
+    </section>
+
+    <section id="leftSideAndCards">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 py-1">
+            <p class="bikes d-inline">Bikes</p>
+            <div class="d-flex">
+              <input
+                type="text"
+                class="mr-2 searchInput"
+                placeholder="Search"
+              />
+              <button type="button" class="btn-warning searchButton">
+                Search
+              </button>
+            </div>
+            <hr />
+          </div>
+          <div class="col-2">
+            <div class="row">
+              <div class="col-12">
+                <p class="filteredBy">Filtered by:</p>
+              </div>
+              <div class="col-12 pt-4">
+                <div
+                  class="d-flex d-flex justify-content-between all cursor-pointer hoveredOrange hovered showAllEl"
+                >
+                  <h6 id="showAll">Show all</h6>
+                  <p class="paragraphNum showAll"></p>
+                </div>
+                <hr />
+              </div>
+              <div class="col-12">
+                <p class="gender">Gender</p>
+                <div
+                  class="d-flex justify-content-between cursor-pointer hoveredOrange male hovered"
+                >
+                  <h6>Male</h6>
+                  <p class="paragraphNum maleNum"></p>
+                </div>
+                <div
+                  class="d-flex justify-content-between cursor-pointer hoveredOrange hovered female"
+                >
+                  <h6>Female</h6>
+                  <p class="paragraphNum femaleNum"></p>
+                </div>
+                <hr />
+              </div>
+              <div class="col-12">
+                <p class="brand">Brand</p>
+                <div
+                  class="d-flex justify-content-between cursor-pointer hoveredOrange hovered leGrand"
+                >
+                  <h6 class="text-uppercase">le grand bikes</h6>
+                  <p class="paragraphNum leGrandBikes"></p>
+                </div>
+                <div
+                  class="d-flex justify-content-between cursor-pointer hoveredOrange hovered krossProduct"
+                >
+                  <h6 class="text-uppercase">kross</h6>
+                  <p class="paragraphNum kross">7</p>
+                </div>
+                <div
+                  class="d-flex justify-content-between cursor-pointer hoveredOrange hovered explorerProduct"
+                >
+                  <h6 class="text-uppercase">explorer</h6>
+                  <p class="paragraphNum explorer"></p>
+                </div>
+                <div
+                  class="d-flex justify-content-between cursor-pointer hoveredOrange hovered visitorProduct"
+                >
+                  <h6 class="text-uppercase">visitor</h6>
+                  <p class="paragraphNum visitor">7</p>
+                </div>
+                <div
+                  class="d-flex justify-content-between cursor-pointer hoveredOrange hovered ponyProduct"
+                >
+                  <h6 class="text-uppercase">pony</h6>
+                  <p class="paragraphNum pony">7</p>
+                </div>
+                <div
+                  class="d-flex justify-content-between cursor-pointer hoveredOrange hovered forceProduct"
+                >
+                  <h6 class="text-uppercase">force</h6>
+                  <p class="paragraphNum force"></p>
+                </div>
+                <div
+                  class="d-flex justify-content-between cursor-pointer hoveredOrange hovered eBikesProduct"
+                >
+                  <h6 class="text-uppercase">e-bikes</h6>
+                  <p class="paragraphNum eBikes">7</p>
+                </div>
+                <div
+                  class="d-flex justify-content-between cursor-pointer hoveredOrange hovered idealProduct"
+                >
+                  <h6 class="text-uppercase">ideal</h6>
+                  <p class="paragraphNum ideal"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-10">
+            <div class="row" id="cards"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="container-fluid mt-5" style="background-color: #f6f2f2" ;>
+        <div class="row py-5">
+          <div class="col-3 border-right cursor-pointer">
+            <p class="boldedParagraph">Social share</p>
+            <div class="d-flex">
+              <i
+                class="fa-brands fa-facebook-f p-2 mr-5 text-white orange hoveredGrey"
+              ></i>
+              <i
+                class="fa-brands fa-instagram p-2 mr-5 text-white orange hoveredGrey"
+              ></i>
+              <i
+                class="fa-brands fa-twitter p-2 mr-5 text-white orange hoveredGrey"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin p-2 mr-5 text-white orange hoveredGrey"
+              ></i>
+            </div>
+          </div>
+          <div class="col-3 border-right cursor-pointer">
+            <p class="boldedParagraph">Event info</p>
+            <ul class="list-unstyled">
+              <li class="hoveredOrange">Enter Now</li>
+              <li class="hoveredOrange">Event Info</li>
+              <li class="hoveredOrange">Course Maps</li>
+              <li class="hoveredOrange">Race Pack</li>
+              <li class="hoveredOrange">Results</li>
+              <li class="hoveredOrange">FAQs</li>
+              <li class="hoveredOrange">Am I Registered?</li>
+            </ul>
+          </div>
+          <div class="col-3 border-right cursor-pointer">
+            <p class="boldedParagraph">Registration</p>
+            <ul class="list-unstyled">
+              <li class="hoveredOrange">Volunteers</li>
+              <li class="hoveredOrange">Gallery</li>
+              <li class="hoveredOrange">Press</li>
+              <li class="hoveredOrange">Results</li>
+              <li class="hoveredOrange">Privacy Policy</li>
+              <li class="hoveredOrange">Service Plus</li>
+              <li class="hoveredOrange">Contacts</li>
+            </ul>
+          </div>
+          <div class="col-3 border-right cursor-pointer">
+            <p class="boldedParagraph">Schedule</p>
+            <ul class="list-unstyled">
+              <li class="hoveredOrange">Gallery</li>
+              <li class="hoveredOrange">About</li>
+              <li class="hoveredOrange">Videos</li>
+              <li class="hoveredOrange">Results</li>
+              <li class="hoveredOrange">FAQs</li>
+              <li class="hoveredOrange">Results</li>
+              <li class="hoveredOrange">Volunteers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
