@@ -1,0 +1,42 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use 'sass:math';
+
+
+
+.section-four {
+      @extend %container-big;
+      background-color: lightgrey;
+
+      .wrapper-four {
+            @extend %wrap;
+            text-align: center;
+            line-height: 25px;
+
+                .blue-line {
+                        background-color: blue;
+                        height: 2px;
+                        width: 160px;
+                        margin: 0 auto;
+                        margin-bottom: 40px;
+                    }
+                   input {
+                        width: 50%;
+                        padding: 10px 30px;
+                       
+                        @include mix.tablet-styles {
+                         width: 100%;
+                         margin-bottom: 15px;
+                        }
+
+                   } 
+                   .btn {
+                        padding: 10px 30px;
+                        background-color: blue;
+                        color: white;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                   } 
+                  }
+              }
+            

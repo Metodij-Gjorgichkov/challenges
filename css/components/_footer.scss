@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as var;
+@use "../abstracts/mixins" as mix;
+@use 'sass:math';
+
+.footer {
+      background-color: darkslategrey;
+      @extend %section;
+
+      .footer-container {
+            @extend %wrap;
+            text-align: center;
+      }
+      .icons i {
+            margin-bottom: 20px;
+            color: white;
+
+            &:not(:last-child) {
+                  margin-right: 15px;
+            }
+      }
+      .text-uppercase {
+            text-transform: uppercase;
+            color: white;
+            line-height: 20px;
+            
+            span {
+                  font-weight: bold;
+            }
+      }
+}
