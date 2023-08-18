@@ -1,0 +1,24 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@use "sass:math";
+
+.menu-mobile {
+    display: none;
+
+    @include mix.tablet-styles {
+        display: block;
+        padding: math.div(var.$gutter-base, 1.2);
+
+        .flex {
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        i {
+            font-size: var.$heading-size-tiny;
+            color: var.$text-color-base-lighten;
+            border: 1px solid var.$text-color-base-lighten;
+            padding: math.div(var.$gutter-base, 10);
+		}
+    }
+}
