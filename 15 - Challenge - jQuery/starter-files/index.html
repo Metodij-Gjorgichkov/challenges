@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car racing game</title>
+    <meta name="keywords" content="html,css,lekcii" />
+    <meta name="description" content="ova e strana za ucenje" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+    <!-- Latest compiled and minified BOOTSTRAP CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Local CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body id="race">
+    <!-- write your code here -->
+    <section id="firstSection">
+      <div class="container">
+        <div class="row pt-3">
+          <div class="col-12">
+            <h1>Car racing game</h1>
+          </div>
+        </div>
+        <div class="row mt-2 pb-3">
+          <div class="col-12">
+            <button
+              id="raceBtn"
+              type="button"
+              class="mr-3 border border-white bg-transparent text-white px-5 py-2"
+            >
+              Race!
+            </button>
+            <button
+              id="startOverBtn"
+              type="button"
+              class="border border-white bg-transparent text-white px-5 py-2"
+            >
+              Start over
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="secondSection">
+      <div class="container-fluid p-0">
+        <div class="row bg-image mx-0 position-relative">
+          <h1 class="countDown m-0 p-0 text-white"></h1>
+          <div class="col-12">
+            <img src="./images/car2.gif" id="carOne" alt="car2" />
+          </div>
+          <div class="col-12">
+            <img src="./images/car1.gif" id="carTwo" alt="car1" />
+          </div>
+          <div class="col-12 finish-flag">
+            <img src="./images/finish.gif" alt="flag" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="thirdSection">
+      <div class="container-fluid">
+        <div class="row mt-3">
+          <div class="col-6">
+            <h2>Results</h2>
+            <div class="row">
+              <div class="col-6 text-white">
+                <h5 class="text-white">Car 1</h5>
+                <table class="table table-bordered placeOne"></table>
+              </div>
+              <div class="col-6">
+                <h5 class="text-danger">Car 2</h5>
+                <table class="table table-bordered placeTwo"></table>
+              </div>
+            </div>
+          </div>
+          <div class="col-6 previousResults">
+            <h3 class="text-white">
+              Results from the previous time you played this game
+            </h3>
+            <div class="row mt-5">
+              <table class="table table-bordered"></table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
