@@ -1,0 +1,13 @@
+body {
+      padding-top: 56px;
+      
+}
+.bg-image {
+      width: 100%;
+      height: 80vh;
+      background-image: url(./images/home.jpg);
+      background-position: center;
+      background-size: cover;
+      background-blend-mode: soft-light;
+      background-color: rgb(96, 88, 88);
+}
