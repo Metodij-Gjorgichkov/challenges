@@ -1,0 +1,51 @@
+/* .bg-image {
+      /* width: 100%;
+      height: 100vh;
+      background-image: url(./img.jpeg);
+      background-position: bottom;
+      background-size: cover; */
+/* } */ 
+.py-10 {
+      padding-top: 35px;
+      padding-bottom: 280px;
+}
+.btn-k {
+      width: 110px;
+      height: 50px;
+      margin-bottom: 10px;
+      background-color: rgba(16, 13, 13, 0.5);
+      border: 6px solid black;
+      border-radius: 10px;
+      color: white;
+      text-transform: uppercase;
+      
+}
+.btn-long {
+      width: 600px;
+      height: 50px;
+      background-color: rgba(16, 13, 13, 0.5);
+      border: 6px solid black;
+      border-radius: 10px;
+      color: white;
+      text-transform: uppercase;
+}
+.soft {
+      background-color: rgba(255, 255, 255, 0.1); 
+      background-blend-mode: soft-light; 
+      border-top: 6px solid black;
+      left: 0;
+      right: 0;
+      bottom: 0;
+}
+.hover {
+      background-color: white !important;
+      color: black !important;
+      border: 5px solid green !important;  
+}
+.scale {
+      transform: scale(1);
+}
+p {
+      color: white;
+      font-size: 35px !important;
+}

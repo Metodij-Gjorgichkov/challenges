@@ -1,0 +1,90 @@
+/* CSS RESETS */
+* {
+     box-sizing: border-box;
+}
+body {
+      margin: 0;
+}
+h1,
+h2,
+h3,
+ul,
+p {
+      margin-top: 0;
+}
+h1 {
+      font-size: 43px;
+}
+img {
+      max-width: 100%;
+}
+/* CSS RESETS */
+
+.bg-image {
+      width: 100%;
+      height: 100vh;
+      background-image: url(./starter-files/images/img.jpeg);
+      background-position: bottom;
+}
+.container-big {
+      width: 85%;
+      margin-right: auto;
+      margin-left: auto;
+      text-align: center;
+} 
+.section-big {
+      padding-top: 60px;
+      padding-bottom: 270px;
+}
+.main-h1{
+      color: white;
+      text-transform: uppercase;
+}
+.keyboard {
+      background-color: rgba(255, 255, 255, 0.1); 
+      background-blend-mode: soft-light; 
+      padding-top: 25px;
+      padding-bottom: 80px;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+}
+.d-flex {
+      width: 95%;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      justify-content: center;
+}
+.btn {
+      width: 120px;
+      height: 60px;
+      text-transform: uppercase;
+      background-color: rgba(16, 13, 13, 0.5);
+      color: white;
+      border: 6px solid black;
+      border-radius: 10px;
+      cursor: pointer;
+}
+.btn:not(:last-child) {
+      margin-right: 10px;
+      margin-bottom: 20px;
+}
+.btn-long {
+      width: 500px;
+      height: 70px;
+      border: 7px solid black;
+      border-radius: 10px;
+      color: white;
+      text-transform: uppercase;
+      background-color: rgba(16, 13, 13, 0.5);
+      cursor: pointer;
+}
+.hover {
+      background-color: black;
+}
+.paragraph {
+      color: white;
+      font-size: 55px;
+}
