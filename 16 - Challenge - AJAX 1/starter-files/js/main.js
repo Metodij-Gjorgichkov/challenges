@@ -11,35 +11,36 @@ $(".hovered").click(function () {
 });
 // logic for adding the orange color when element is clicked
 
-// function for showing all the cards
-function showAllCards() {
+// function for showing filtered cards
+function showFilteredCards(filteredProducts) {
   $("#cards").html("");
 
-  fetch("https://challenges.brainster.tech/ajax_data/data.json")
-    .then((res) => res.json())
-    .then((data) => {
-      data.products.forEach((product) => {
-        $("#cards").append(`
-          <div class="col-4 mb-4">
-            <div class="card borderOrange">
-              <img class="card-img-top p-5 d-flex justify-content-center align-items-center"
-                style="width: 350px" src="./img/${product.image}.png" alt="Card image cap" />
-              <div class="card-body orange">
-                <h6 class="boldedParagraph text-uppercase">${product.name}</h6>
-                <p class="card-text">${product.price}$</p>
-              </div>
-            </div>
+  filteredProducts.forEach((product) => {
+    $("#cards").append(`
+      <div class="col-4 mb-4">
+        <div class="card borderOrange">
+          <img class="card-img-top p-5 d-flex justify-content-center align-items-center"
+            style="width: 350px" src="./img/${product.image}.png" alt="Card image cap" />
+          <div class="card-body orange">
+            <h6 class="boldedParagraph text-uppercase">${product.name}</h6>
+            <p class="card-text">${product.price}$</p>
           </div>
-        `);
-      });
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-    });
+        </div>
+      </div>
+    `);
+  });
 }
-// function for showing all the cards
 
-//  rendering the cards on load and populating the paragraphs with the cards length
+// function for filtering the data
+function applyFilter(data, filterType, filterValue) {
+  const filteredProducts = data.filter((product) => {
+    return product[filterType] === filterValue;
+  });
+
+  showFilteredCards(filteredProducts);
+}
+
+// rendering the cards on load and populating the paragraphs with the cards length
 function onLoadPage() {
   const showAllElement = $(".showAllEl");
   showAllElement.addClass("hoverOrange");
@@ -48,141 +49,118 @@ function onLoadPage() {
   fetch("https://challenges.brainster.tech/ajax_data/data.json")
     .then((res) => res.json())
     .then((data) => {
-      showAllCards();
+      showFilteredCards(data.products);
 
+      // populating the paragraph with products length
       const dataLength = data.products.length;
       $(".showAll").html(dataLength);
-
       const maleProducts = data.products.filter(
         (product) => product.gender === "MALE"
       ).length;
+
       $(".maleNum").html(maleProducts);
 
       const femaleProducts = data.products.filter(
         (product) => product.gender === "FEMALE"
       ).length;
+
       $(".femaleNum").html(femaleProducts);
 
       const leGrandProducts = data.products.filter(
         (product) => product.brand === "LE GRAND BIKES"
       ).length;
+
       $(".leGrandBikes").html(leGrandProducts);
 
       const krossProducts = data.products.filter(
         (product) => product.brand === "KROSS"
       ).length;
+
       $(".kross").html(krossProducts);
 
       const explorerProducts = data.products.filter(
         (product) => product.brand === "EXPLORER"
       ).length;
+
       $(".explorer").html(explorerProducts);
 
       const visitorProducts = data.products.filter(
         (product) => product.brand === "VISITOR"
       ).length;
+
       $(".visitor").html(visitorProducts);
 
       const ponyProducts = data.products.filter(
         (product) => product.brand === "PONY"
       ).length;
+
       $(".pony").html(ponyProducts);
 
       const forceProducts = data.products.filter(
         (product) => product.brand === "FORCE"
       ).length;
+
       $(".force").html(forceProducts);
 
       const eBikesProducts = data.products.filter(
         (product) => product.brand === "E-BIKES"
       ).length;
+
       $(".eBikes").html(eBikesProducts);
 
       const idealProducts = data.products.filter(
         (product) => product.brand === "IDEAL"
       ).length;
+
       $(".ideal").html(idealProducts);
+
+      // Click event listeners for filtering
+      $(".male").click(function () {
+        applyFilter(data.products, "gender", "MALE");
+      });
+
+      $(".female").click(function () {
+        applyFilter(data.products, "gender", "FEMALE");
+      });
+      $(".leGrand").click(function () {
+        applyFilter(data.products, "brand", "LE GRAND BIKES");
+      });
+
+      $(".krossProduct").click(function () {
+        applyFilter(data.products, "brand", "KROSS");
+      });
+
+      $(".explorerProduct").click(function () {
+        applyFilter(data.products, "brand", "EXPLORER");
+      });
+
+      $(".visitorProduct").click(function () {
+        applyFilter(data.products, "brand", "VISITOR");
+      });
+
+      $(".ponyProduct").click(function () {
+        applyFilter(data.products, "brand", "PONY");
+      });
+
+      $(".forceProduct").click(function () {
+        applyFilter(data.products, "brand", "FORCE");
+      });
+
+      $(".eBikesProduct").click(function () {
+        applyFilter(data.products, "brand", "E-BIKES");
+      });
+
+      $(".idealProduct").click(function () {
+        applyFilter(data.products, "brand", "IDEAL");
+      });
+
+      $(".all").click(function () {
+        showFilteredCards(data.products);
+      });
     });
 }
-//  rendering the cards on load and populating the paragraphs with the cards length
 
-// function for filtering the data
-function applyFilter(filterType, filterValue) {
-  $("#cards").html("");
-
-  fetch("https://challenges.brainster.tech/ajax_data/data.json")
-    .then((res) => res.json())
-    .then((data) => {
-      const filteredProducts = data.products.filter((product) => {
-        return product[filterType] === filterValue;
-      });
-      filteredProducts.forEach((product) => {
-        $("#cards").append(`
-		  <div class="col-4 mb-4">
-		    <div class="card borderOrange">
-			<img
-			  class="card-img-top p-5 d-flex justify-content-center align-items-center"
-			  style="width: 350px"
-			  src="./img/${product.image}.png"
-			  alt="Card image cap"
-			/>
-			<div class="card-body orange">
-			  <h6 class="boldedParagraph text-uppercase">
-			    ${product.name}
-			  </h6>
-			  <p class="card-text">${product.price}$</p>
-			</div>
-		    </div>
-		  </div>`);
-      });
-    });
-}
-// function for filtering the data
-
-$(".male").click(function () {
-  applyFilter("gender", "MALE");
-});
-
-$(".female").click(function () {
-  applyFilter("gender", "FEMALE");
-});
-
-$(".leGrand").click(function () {
-  applyFilter("brand", "LE GRAND BIKES");
-});
-
-$(".krossProduct").click(function () {
-  applyFilter("brand", "KROSS");
-});
-
-$(".explorerProduct").click(function () {
-  applyFilter("brand", "EXPLORER");
-});
-
-$(".visitorProduct").click(function () {
-  applyFilter("brand", "VISITOR");
-});
-
-$(".ponyProduct").click(function () {
-  applyFilter("brand", "PONY");
-});
-
-$(".forceProduct").click(function () {
-  applyFilter("brand", "FORCE");
-});
-
-$(".eBikesProduct").click(function () {
-  applyFilter("brand", "E-BIKES");
-});
-
-$(".idealProduct").click(function () {
-  applyFilter("brand", "IDEAL");
-});
-
-$(".all").click(function () {
-  showAllCards();
-});
-
+// rendering the cards on load and populating the paragraphs with the cards length
 window.addEventListener("load", onLoadPage);
 
 // Added extra functionallities to the challenge
