@@ -1,0 +1,30 @@
+@use "../css/abstracts/variables" as var;
+@use "../css/abstracts/mixins" as mix;
+@use "sass:math";
+
+.flex-card {
+  display: flex;
+  flex-wrap: wrap;
+
+  .card-33 {
+    width: 33.33%;
+    position: relative;
+    filter: brightness(1);
+
+    @media (max-width: 768px) {
+      width: 50%;
+    }
+    @media (max-width: 425px) {
+      width: 100%;
+    }
+
+    .centered-content {
+      color: var.$text-color-primary;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+  }
+}

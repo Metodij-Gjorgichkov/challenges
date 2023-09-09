@@ -1,0 +1,18 @@
+@use "../css/abstracts/variables" as var;
+@use "../css/abstracts/mixins" as mix;
+@use "sass:math";
+
+.main-section {
+  @extend %section;
+  background-color: var.$background-color-secondary;
+
+  .inner-section {
+    @extend %wrap;
+    text-align: center;
+
+    p {
+      text-transform: uppercase;
+      color: var.$text-color-secondary;
+    }
+  }
+}

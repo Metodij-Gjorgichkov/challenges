@@ -1,0 +1,37 @@
+@use "../css/abstracts/variables" as var;
+@use "../css/abstracts/mixins" as mix;
+@use "sass:math";
+
+.main-container {
+  @extend %section;
+
+  .inner-container {
+    @extend %wrap;
+
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .card-70 {
+        width: 70%;
+
+        @media (max-width: 425px) {
+          width: 100%;
+        }
+        .about-color-red {
+          color: var.$text-color-secondary;
+          text-transform: uppercase;
+        }
+      }
+      .card-30 {
+        width: 30%;
+
+        @media (max-width: 425px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

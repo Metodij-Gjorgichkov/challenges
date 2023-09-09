@@ -1,0 +1,40 @@
+@use "../css/abstracts/variables" as var;
+@use "../css/abstracts/mixins" as mix;
+@use "sass:math";
+
+.bg-image {
+  width: 100%;
+  height: 100vh;
+  background-image: url(https://fastly.picsum.photos/id/116/1920/1000.jpg?hmac=pIyQ6tt97jGvSHg2jc3ZGxf28Fxu6rAQ0xOKB4APDtU);
+  background-position: center;
+  background-size: cover;
+
+  .container-inner {
+    @extend %wrap;
+    color: var.$text-color-primary;
+    line-height: var.$line-height-base;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+
+    .summer-vacation {
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    .nomad-nation {
+      margin-bottom: 2rem;
+    }
+
+    .btn-banner {
+      max-width: 150px;
+      text-transform: uppercase;
+      background-color: var.$background-color-base;
+      color: var.$text-color-base;
+
+      @media (max-width: 425px) {
+        max-width: 380px;
+      }
+    }
+  }
+}
