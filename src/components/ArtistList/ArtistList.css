@@ -1,0 +1,14 @@
+.artistsCard {
+      padding: 0px 20px 20px 20px;
+}
+.p-relative {
+      position: relative;
+}
+.artistsCard span {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 10px;
+      background-color: aqua;
+      text-decoration: none;
+}

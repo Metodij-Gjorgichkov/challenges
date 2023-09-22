@@ -1,0 +1,15 @@
+.albumPage img {
+      max-width: 35%;
+      margin-top: 30px;
+      margin-bottom: 30px;
+}
+.bolded {
+      font-weight: 500;
+}
+h3:last-child {
+      margin-bottom: 0;
+      padding-bottom: 33px;
+}
+.albumPage {
+      padding-bottom: 230px;
+}

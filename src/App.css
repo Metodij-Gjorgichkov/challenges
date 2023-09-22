@@ -1,0 +1,26 @@
+/* CSS RESETS */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+img {
+  max-width: 100%;
+}
+/* CSS RESETS */
+.App {
+  text-align: center;
+  max-width: 768px;
+  margin: 0 auto;
+}
+.Wrapper {
+  background-color: #d3d3d3;
+}
