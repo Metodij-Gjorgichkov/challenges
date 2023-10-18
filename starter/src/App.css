@@ -1,0 +1,219 @@
+/* css resets */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+p,
+ul {
+  margin-top: 0;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* general styles */
+h1,
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-center {
+  text-align: center;
+}
+.container {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 30px;
+}
+.container:not(:last-child) {
+  margin-bottom: 60px;
+  border-bottom: 2px solid #f5f5f5;
+}
+/* navbar component */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+header .logo {
+  text-transform: uppercase;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+header .fav-icon {
+  background-color: transparent;
+  color: tomato;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+}
+
+/* footer component */
+footer {
+  text-align: center;
+}
+
+/* restaurant card */
+.res {
+  flex: 0 1 20%;
+  margin-bottom: 30px;
+}
+.res picture {
+  display: block;
+  height: 200px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  overflow: hidden;
+}
+.res picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.inner-res {
+  margin-right: 15px;
+}
+.inner-res,
+.inner-res img {
+  border-radius: 10px;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  background-color: #f5f5f595;
+  height: 100%;
+  display: block;
+}
+.res .fav-icon {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  color: tomato;
+  font-size: 24px;
+}
+.res-details .content,
+.inner-res .content {
+  padding: 15px;
+}
+.res-details .content > *:last-child,
+.inner-res .content > *:last-child {
+  margin-bottom: 0;
+}
+.content .business-name {
+  margin-bottom: 6px;
+}
+.content .restaurant-type {
+  font-weight: bold;
+  color: tomato;
+}
+
+/* restaurant detail */
+.res-details {
+  background-color: #f5f5f595;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.res-details img {
+  width: 100%;
+  object-fit: cover;
+}
+.res-details .content p a {
+  text-decoration: none;
+  color: black;
+}
+.res-details .content p {
+  margin-bottom: 10px;
+}
+.reviews-container h1 {
+  margin-top: 30px;
+}
+.review {
+  margin-bottom: 20px;
+  background-color: #f5f5f595;
+  padding: 15px;
+  border-radius: 10px;
+}
+/* review form component */
+.review-form {
+  margin-top: 30px;
+}
+input {
+  border-radius: 4px;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 20px;
+}
+form button {
+  background-color: green;
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  height: 30px;
+}
+/* cuisine form component */
+.cui-btn:not(:last-child) {
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.cui-btn,
+.sup-btn {
+  text-decoration: none;
+}
+.btn {
+  padding: 10px 15px;
+  background-color: tomato;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* suprise restaurant component */
+.btn-green {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: green;
+  color: white;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* media queries */
+@media (max-width: 768px) {
+  .res {
+    flex-basis: 50%;
+    margin-right: 0;
+  }
+}
+@media (max-width: 425px) {
+  .res {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+}
