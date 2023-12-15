@@ -14,7 +14,7 @@ const ReviewForm = ({ foundSlug }: Props) => {
 
   const handleFormSubmit = () => {
     if (author && comment && stars) {
-      fetch(`http://localhost:5001/restaurants/${foundSlug.id}`, {
+      fetch(`https://igralishte-api.onrender.com/restaurants/${foundSlug.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

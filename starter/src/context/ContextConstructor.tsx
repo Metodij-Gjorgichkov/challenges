@@ -1,6 +1,5 @@
 import React, { createContext, useEffect, useState } from "react";
 import { RestaurantInterface } from "../interfaces/type";
-import { json } from "stream/consumers";
 
 interface RestaurantContextType {
   restaurants: RestaurantInterface[];
@@ -42,7 +41,7 @@ const ContextConstructor = ({ children }: Props) => {
   };
 
   const handleUpdateReview = () => {
-    fetch("http://localhost:5001/restaurants")
+    fetch("https://igralishte-api.onrender.com/restaurants")
       .then((res) => res.json())
       .then((data) => setRestaurants(data));
   };
@@ -54,7 +53,7 @@ const ContextConstructor = ({ children }: Props) => {
       );
       setRestaurants(restaurantsFromLocalStorage);
     } else {
-      fetch("http://localhost:5001/restaurants")
+      fetch("https://igralishte-api.onrender.com/restaurants")
         .then((res) => {
           if (!res) {
             throw new Error("Network response was not ok");
