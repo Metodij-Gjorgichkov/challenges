@@ -21,7 +21,7 @@ class PlacesContainer extends React.Component<any, State> {
   }
 
   componentDidMount(): void {
-    fetch("http://localhost:5001/places")
+    fetch("https://react-01-api.onrender.com/places")
       .then((res) => res.json())
       .then((data: cardType[]) => {
         this.setState({ cards: data });
