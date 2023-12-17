@@ -20,23 +20,27 @@ img {
   max-width: 100%;
 }
 
-.footer, .bg-image1 .section {
+.footer,
+.bg-image1 .section {
   padding-top: 1.875rem;
   padding-bottom: 1.875rem;
 }
 @media (max-width: 768px) {
-  .footer, .bg-image1 .section {
+  .footer,
+  .bg-image1 .section {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem;
   }
 }
 
-.section-three, .section-two {
+.section-three,
+.section-two {
   padding-top: 4.6875rem;
   padding-bottom: 4.6875rem;
 }
 @media (max-width: 768px) {
-  .section-three, .section-two {
+  .section-three,
+  .section-two {
     padding-top: 1.875rem;
     padding-bottom: 1.875rem;
   }
@@ -53,13 +57,21 @@ img {
   }
 }
 
-.footer .footer-container, .section-four .wrapper-four, .section-three .wrapper-three, .section-two .wrapper-two, .bg-image1 .section .wrapper {
+.footer .footer-container,
+.section-four .wrapper-four,
+.section-three .wrapper-three,
+.section-two .wrapper-two,
+.bg-image1 .section .wrapper {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 @media (max-width: 999px) {
-  .footer .footer-container, .section-four .wrapper-four, .section-three .wrapper-three, .section-two .wrapper-two, .bg-image1 .section .wrapper {
+  .footer .footer-container,
+  .section-four .wrapper-four,
+  .section-three .wrapper-three,
+  .section-two .wrapper-two,
+  .bg-image1 .section .wrapper {
     width: 100%;
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
@@ -74,7 +86,6 @@ img {
   background-size: cover;
   background-blend-mode: difference;
   position: relative;
-  opacity: 0.5;
 }
 .bg-image1 .section .wrapper {
   display: flex;
@@ -275,4 +286,4 @@ img {
 }
 .footer .text-uppercase span {
   font-weight: bold;
-}/*# sourceMappingURL=main.css.map */
+} /*# sourceMappingURL=main.css.map */
